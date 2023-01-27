@@ -10,6 +10,7 @@
   --text-light: #fff;
   --secondary-color: #000;
   --primary-color: #FAC539;
+  --paragraph-color:#FFFFFFB3;
   --main-font-family: 'Roboto', sans-serif;
   --main-font-size: 16px;
 }
@@ -63,3 +64,6 @@ body {
   --bs-btn-hover-bg: var(--primary-color);
   font-family: 'Roboto', sans-serif;
 }
+
+
+
