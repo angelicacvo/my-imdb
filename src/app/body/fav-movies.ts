@@ -1,4 +1,4 @@
-export interface favMovies{
+export interface FavMovies{
     score: number;
     name: string;
     watchList: string;

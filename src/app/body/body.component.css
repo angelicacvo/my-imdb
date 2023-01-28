@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 100px;
+  }
+
+.content {
+    padding-left: 20px;
+}
+.firstbtn {
+  text-decoration: none;
+  display: flex;
+  border: none;
+  padding: 0;
+  background: none; 
+}
+
+.line {
+  color: var(--primary-color);
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding-left: 4px;
+}
+
+.bi {
+  color: var(--text-light);
+}
+
+.paragraph {
+  color: var(--paragraph-color);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}

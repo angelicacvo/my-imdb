@@ -2,35 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 100px;
   padding-bottom: 100%;
-}
-
-.firstbtn {
-  text-decoration: none;
-  display: flex;
-  border: none;
-  padding: 0;
-  background: none; 
-}
-
-.line {
-  color: var(--primary-color);
-}
-
-.subtitle {
-  color: var(--text-light);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding-left: 4px;
-}
-
-.bi {
-  color: var(--text-light);
-}
-
-.paragraph {
-  color: var(--paragraph-color);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .carousel {
@@ -63,11 +35,25 @@ img {
   overflow: hidden;
   border: none;
   text-overflow: ellipsis;
+  text-decoration: none;
   color:var(--second-button-color);
   background-color: var(--second-button-background);
   padding-bottom: 10px;
   font-size: 15px;
   margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.btn-secondary:hover{
+  background-color: var(--second-button-hover);
+}
+
+.card-title{
+  text-decoration: none;
+}
+
+.card-title:hover{
+  text-decoration: underline;
 }
 
 .btn-outline-dark {
@@ -77,6 +63,10 @@ img {
   color: var(--text-light);
   display: flex;
   justify-content: center;
+}
+
+.btn-outline-dark:hover{
+  background-color: var(--second-button-background);
 }
 
 .score-container{
@@ -97,6 +87,26 @@ img {
   color: var(--second-button-color);
   width: 15px;
 }
+
+.bi-star:hover{
+  background-color: var(--second-button-background);
+  color: var(--text-light);
+
+}
+
+.underline-on-hover:hover{
+  text-decoration: underline;
+}
+
+.carousel-control-prev, 
+.carousel-control-next  {
+    position:absolute;
+    width: 5%;
+}
+
+
+
+
 
 
 
