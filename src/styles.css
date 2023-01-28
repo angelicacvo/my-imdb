@@ -11,7 +11,10 @@
   --secondary-color: #000;
   --primary-color: #FAC539;
   --paragraph-color:#FFFFFFB3;
+  --second-button-background: #FFFFFF14;
+  --second-button-color: #5799EF; 
   --main-font-family: 'Roboto', sans-serif;
+  --btn-hover-border-color: transparent;
   --main-font-size: 16px;
 }
 
