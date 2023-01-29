@@ -4,9 +4,9 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col" >
+            <div class="col" *ngFor="let favMovie of favMovies">
               <div class="card" style="width: 11rem">
-                <img [src]="img1" class="card-img-top" alt="..." />
+                <img [src]="favMovie.img" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="score-container">
                     <svg
@@ -21,7 +21,7 @@
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
                       />
                     </svg>
-                    <p class="card-stars">Puntuación</p>
+                    <p class="card-stars">{{ favMovie.score }}</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -35,9 +35,9 @@
                       />
                     </svg>
                   </div>
-                  <a href="#" class="card-title">Nombre película</a>                    
+                  <a href="#" class="card-title"> {{ favMovie.title }}</a>                    
                   <a href="#" class="btn btn-secondary">
-                    + Lista de seguimiento</a
+                    + Lista de seguimiento </a
                   >
                   <a href="#" class="btn btn-outline-dark">
                     <svg
@@ -52,274 +52,7 @@
                         d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
                       />
                     </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img2" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img3" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <div>
-                    <a href="#" class="btn btn-outline-dark">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-caret-right-fill"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                        />
-                      </svg>
-                      Tráiler</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img4" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img5" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img6" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
+                    Trailer</a
                   >
                 </div>
               </div>
@@ -328,9 +61,9 @@
         </div>
         <div class="carousel-item">
           <div class="row">
-            <div class="col">
+            <div class="col" *ngFor="let favMovie of favMovies">
               <div class="card" style="width: 11rem">
-                <img [src]="img7" class="card-img-top" alt="..." />
+                <img [src]="favMovie.img" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="score-container">
                     <svg
@@ -345,7 +78,7 @@
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
                       />
                     </svg>
-                    <p class="card-stars">Puntuación</p>
+                    <p class="card-stars">{{ favMovie.score }}</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -359,9 +92,9 @@
                       />
                     </svg>
                   </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
+                  <a href="#" class="card-title"> {{ favMovie.title }}</a>                    
+                  <a href="#" class="btn btn-secondary">
+                    + Lista de seguimiento </a
                   >
                   <a href="#" class="btn btn-outline-dark">
                     <svg
@@ -376,276 +109,10 @@
                         d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
                       />
                     </svg>
-                    Tráiler</a
+                    Trailer</a
                   >
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img8" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img9" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img10" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img11" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 11rem">
-                <img [src]="img12" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="score-container">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      />
-                    </svg>
-                    <p class="card-stars">Puntuación</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-star"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                      />
-                    </svg>
-                  </div>
-                  <a href="#" class="card-title">Nombre película</a>     
-                  <a href="#" class="btn btn-secondary"
-                    >+ Lista de seguimiento</a
-                  >
-                  <a href="#" class="btn btn-outline-dark">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-caret-right-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    Tráiler</a
-                  >
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

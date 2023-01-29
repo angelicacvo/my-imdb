@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FavMovie } from '../fav-movies';
+
 
 @Component({
   selector: 'app-favs',
@@ -6,12 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./favs.component.css']
 })
 export class FavsComponent {
-  img1: string = "./assets/img/1917.png"
-  img2: string = "./assets/img/avatar.png"
-  img3: string = "./assets/img/black-swan.png"
-  img4: string = "./assets/img/dora.png"
-  img5: string = "./assets/img/endgame.png"
-  img6: string = "./assets/img/ironman.png"
+
+  @Input() favMovies: FavMovie[] = [
+  ];
   img7: string = "./assets/img/jaws.png"
   img8: string = "./assets/img/joker.png"
   img9: string = "./assets/img/ladybird.png"

@@ -16,7 +16,7 @@ export class MenuComponent {
   @Input() isOpened = false;
   @Output() close = new EventEmitter();
 
-  faXmark = faXmark;
+  faXmark = faXmark; 
   items: Item[] = [
     {
       icon: 'film',
