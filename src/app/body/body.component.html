@@ -12,6 +12,7 @@
         <p class="paragraph">Los mejores programas y películas de esta semana</p>
     </div>
 
-    <app-favs [favMovies]="favMovies">
+    <app-favs *ngFor="let favMovie of favMovies" 
+    [favMovies]="favMovies">
     </app-favs>
 </div>
