@@ -4,7 +4,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col" *ngFor="let favMovie of favMovies">
+            <div class="col" *ngFor="let favMovie of favMovies.slice(0, 6)">
               <div class="card" style="width: 11rem">
                 <img [src]="favMovie.favMovieImages.img" class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -38,7 +38,7 @@
         </div>
         <div class="carousel-item">
           <div class="row">
-            <div class="col" *ngFor="let favMovie of favMovies">
+            <div class="col" *ngFor="let favMovie of favMovies.slice(6, 12)">
               <div class="card" style="width: 11rem">
                 <img [src]="favMovie.favMovieImages.img" class="card-img-top" alt="..." />
                 <div class="card-body">
