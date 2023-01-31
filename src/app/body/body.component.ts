@@ -49,7 +49,6 @@ export class BodyComponent {
           {
             img: "./assets/img/endgame.png"
           }
-
       },
       {
         score: 4.6,
@@ -60,53 +59,53 @@ export class BodyComponent {
           }
       },
     
-      // {
-      //   score: 4.6,
-      //   title: 'Jaws',
-      //   favMovieImages:
-      //     {
-      //       img: "./assets/img/jaws.png"
-      //     }
-      // },
-      // {
-      //   score: 5,
-      //   title: 'Joker',
-      //   favMovieImages:
-      //     {
-      //       img: "./assets/img/joker.png"
-      //     }
-      // },
-      // {
-      //   score: 4.6,
-      //   title: 'Lady Bird',
-      //   favMovieImages:
-      //     {
-      //       img: "./assets/img/ladybird.png"
-      //     }
-      // },
-      // {
-      //   score: 4.6,
-      //   title: 'Moonlight',
-      //   favMovieImages:
-      //     {
-      //       img: "../assets/img/moonlight.png"
-      //     }
-      // },
-      // {
-      //   score: 4.6,
-      //   title: 'OUTIH',
-      //   favMovieImages:
-      //     {
-      //       img: "./assets/img/outih.png"
-      //     }
-      // },
-      // {
-      //   score: 4.6,
-      //   title: 'ShangChi',
-      //   favMovieImages:
-      //     {
-      //       img: "./assets/img/shangchi.png"
-      //     }
-      // }
+      {
+        score: 4.6,
+        title: 'Jaws',
+        favMovieImages:
+          {
+            img: "./assets/img/jaws.png"
+          }
+      },
+      {
+        score: 5,
+        title: 'Joker',
+        favMovieImages:
+          {
+            img: "./assets/img/joker.png"
+          }
+      },
+      {
+        score: 4.6,
+        title: 'Lady Bird',
+        favMovieImages:
+          {
+            img: "./assets/img/ladybird.png"
+          }
+      },
+      {
+        score: 4.6,
+        title: 'Moonlight',
+        favMovieImages:
+          {
+            img: "../assets/img/moonlight.png"
+          }
+      },
+      {
+        score: 4.6,
+        title: 'OUTIH',
+        favMovieImages:
+          {
+            img: "./assets/img/outih.png"
+          }
+      },
+      {
+        score: 4.6,
+        title: 'ShangChi',
+        favMovieImages:
+          {
+            img: "./assets/img/shangchi.png"
+          }
+      }
     ]
 }
