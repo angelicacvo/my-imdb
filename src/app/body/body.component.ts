@@ -19,7 +19,7 @@ export class BodyComponent {
           },
       },
       {
-        score: 5,
+        score: 5.0,
         title: 'Avatar',
         favMovieImages:
           {
@@ -35,7 +35,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 3.1,
         title: 'Dora',
         favMovieImages:
           {
@@ -43,7 +43,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 4.9,
         title: 'Avengers: endgame',
         favMovieImages:
           {
@@ -51,7 +51,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 3.8,
         title: 'Iron man',
         favMovieImages:
           {
@@ -60,7 +60,7 @@ export class BodyComponent {
       },
     
       {
-        score: 4.6,
+        score: 2.6,
         title: 'Jaws',
         favMovieImages:
           {
@@ -68,7 +68,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 5,
+        score: 4.8,
         title: 'Joker',
         favMovieImages:
           {
@@ -76,7 +76,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 4.8,
         title: 'Lady Bird',
         favMovieImages:
           {
@@ -84,7 +84,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 4.3,
         title: 'Moonlight',
         favMovieImages:
           {
@@ -92,7 +92,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 4.1,
         title: 'OUTIH',
         favMovieImages:
           {
@@ -100,7 +100,7 @@ export class BodyComponent {
           }
       },
       {
-        score: 4.6,
+        score: 3.1,
         title: 'ShangChi',
         favMovieImages:
           {
